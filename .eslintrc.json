@@ -10,6 +10,7 @@
     "sourceType": "module"
   },
   "rules": {
+    "import/extensions": ["error", "always", { "js": "always" }],
     "no-console": "off",
     "quotes": ["error", "double"],
     "semi": ["error", "always"]
@@ -17,7 +18,10 @@
   "overrides": [
     {
       "files": ["**/*.test.js"],
-      "env": { "jest": true }
+      "env": { "jest": true },
+      "rules": {
+        "func-names": "off"
+      }
     }
   ]
 }
